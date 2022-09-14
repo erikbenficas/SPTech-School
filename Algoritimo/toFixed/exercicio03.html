@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toFixed</title>
+</head>
+<body>
+    <h2>Expressão numérica</h2><br><br>
+
+    Número1 <input id="in_num1"><br>
+    Número2 <input id="in_num2"><br><br>
+
+
+    <button onclick="soma()">SOMA</button><br>
+    <button onclick="dif()">DIFERENÇA</button><br>
+    <button onclick="prod()">PRODUTO</button><br>
+    <button onclick="raz()">RAZÃO</button><br>
+
+    <div id="div_mensagem"></div>
+    
+</body>
+</html>
+<script>
+    function soma(){
+        var n1 = (Number(in_num1.value)).toFixed(2)
+        var n2 = (Number(in_num2.value)).toFixed(2)
+
+        div_mensagem.innerHTML = `A soma entre X e Y é Z`
+    }
+
+    function dif(){
+        var n1 = (Number(in_num1.value)).toFixed(2)
+        var n2 = (Number(in_num2.value)).toFixed(2)
+
+        div_mensagem.innerHTML = ` A diferença entre X e Y é Z`
+    }
+
+    function prod(){
+        var n1 = (Number(in_num1.value)).toFixed(2)
+        var n2 = (Number(in_num2.value)).toFixed(2)
+
+        div_mensagem.innerHTML = `O produto entre X e Y é Z`
+    }
+
+    function raz(){
+        var n1 = (Number(in_num1.value)).toFixed(2)
+        var n2 = (Number(in_num2.value)).toFixed(2)
+
+        div_mensagem.innerHTML =  `A razão entre X e Y é Z`
+
+    }
+</script>
