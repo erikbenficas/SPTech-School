@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Temperatura</h2>
+
+    
+   Temperatura <input id="in_tempo" onchange="ler()"> <br><br>
+
+   <div id="div_mensagem"></div>
+</body>
+</html>
+<script>
+    function ler() {
+        var tempo = Number(in_tempo.value)
+
+        if (tempo < 14) {
+            tempo = `Congelante`
+        } else if (tempo <=21) {
+            tempo = `Com frio`
+        } else if (tempo <= 24) {
+            tempo = `Confortável`
+        } else if (tempo <= 31) {
+            tempo = `Com calor`
+        } else {
+            tempo = `Calor escaldante`
+        }
+
+        div_mensagem.innerHTML = tempo 
+    }
+</script>

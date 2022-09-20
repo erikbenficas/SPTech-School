@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Estações do ano</h2>
+
+    <select id="sel_estacao" onchange="ver()">
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe83a2nJ6_pBxJCoMQTKzfCOOalAH1dv4vwQ&usqp=CAU">Verão</option>
+        <option value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6MSafAvIZBCR0MPTiaFqBNZOrhDo78sG_Ow&usqp=CAU">Primavera</option>
+        <option value="https://s3.static.brasilescola.uol.com.br/be/2021/03/outono.jpg">Outono</option>
+        <option value="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Brakelund_Burial_Ground_1.jpg/220px-Brakelund_Burial_Ground_1.jpg">Inverno</option>
+    </select>
+
+    <br><br><br>
+
+    <img src="" id="img_tempo" alt="" style="">
+</body>
+</html>
+<script>
+    function ver() {
+        var imagem = sel_estacao.value
+        img_tempo.src = imagem 
+    }
+</script>

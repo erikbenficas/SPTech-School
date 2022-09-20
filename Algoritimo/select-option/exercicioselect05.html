@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Tabuada</h2>
+
+    <select id="sel_tabu" onchange="resul()">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+
+    </select>
+    
+    <div id="div_resposta"></div>
+</body>
+</html>
+<script>
+    function resul() {
+        var tabuada = Number(sel_tabu.value)
+
+        div_resposta.innerHTML = 
+        `${tabuada}X 1= ${tabuada*1} <br>
+        ${tabuada}X 2= ${tabuada*2}<br>
+        ${tabuada}X 3= ${tabuada*3}<br>
+        ${tabuada}X 4= ${tabuada*4}<br>
+        ${tabuada}X 5= ${tabuada*5}<br>
+        ${tabuada}X 6= ${tabuada*6}<br>
+        ${tabuada}X 7= ${tabuada*7}<br>
+        ${tabuada}X 8= ${tabuada*8}<br>
+        ${tabuada}X 9= ${tabuada*9}<br>
+        ${tabuada}X 10= ${tabuada*10}`
+    }
+</script>
