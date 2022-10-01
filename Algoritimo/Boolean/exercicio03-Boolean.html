@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nota <input type="text" id="in_nota"><br>
+    Frequência <input type="text" id="in_freq"><br>
+    <button onclick="avaliar()">Avaliar</button>
+    
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
+
+<script>
+    function avaliar() {
+        div_mensagem.innerHTML = ''
+
+        var nota = Number(in_nota.value) >= 6
+        var frequencia = Number(in_freq.value) >= 75
+       
+             if (nota && frequencia)  {
+            div_mensagem.innerHTML = 'Parabéns, aprovado(a)!'
+        }
+        else  {
+            if (!nota) {
+                div_mensagem.innerHTML = 'Reprovado(a) por nota!'
+            } 
+            if (!frequencia) {
+                div_mensagem.innerHTML += '<br>Reprovado(a) por frequência!'
+            }
+        } 
+        
+    }
+</script>

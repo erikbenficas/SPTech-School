@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Auxilio governamental</h2>
+
+    Renda <input type="text" id="in_renda"><br>
+    Renda familiar <input type="text" id="in_familia"><br>
+
+    <button onclick="verificar()">Verificar Ajuda</button>
+</body>
+</html>
+<script>
+    function verificar() {
+        var renda_p = Number(in_renda.value)
+        var renda_f = Number(in_familia.value)
+
+        if (renda_p <= 1050 && renda_f <= 2100) {
+            alert('Você terá direito!')
+        } else {
+            alert ('Você NÃO terá direito')
+        }
+    }
+</script>
