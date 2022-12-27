@@ -1,0 +1,33 @@
+<!-- 3. Crie um programa em HTML/JS que:
+a) Solicite o sabor da pizza que a turma vai pedir
+b) Solicite o preço da pizza
+c) Solicite o prazo de entrega da pizza, em minutos
+d) Ao clicar em "Pedir pizza!", deve aparecer na própria página, abaixo do botão, a frase....
+  A pizza de SABOR, que custou R$X chegará em Y minutos -->
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+  </head>
+  <body>
+    
+    Sabor da pizza <input type="text" id="in_sabor"><br>
+    Preço da pizza <input type="text" id="in_preco"><br>
+    Prazo de entrega <input type="text" id="in_prazo"><br><br>
+
+    <button onclick="pedir()">Pedir pizza</button>
+
+    <div id="div_resposta"></div>
+
+  </body>
+  </html>
+
+  <script>
+    function pedir() {
+        div_resposta.innerHTML = `A pizza de ${in_sabor.value}, que custou R$${in_preco.value} chegará em ${in_prazo.value}`
+    }
+  </script>

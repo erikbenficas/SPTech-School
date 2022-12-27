@@ -1,0 +1,31 @@
+<!-- 2. Crie um programa em HTML/JS que:
+a) Solicite o nome do filme favorito do usuário
+b) Pergunte quantas vezes ele o assistiu
+c) Pergunte qual a última vez que ele assistiu
+d) Ao clicar no botão "Analisar Filme", deve aparecer somente 1 alerta com a frase
+"Você já assistiu FILME pela última vez em X, e já o assitiu Y vezes" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmes</title>
+</head>
+<body>
+
+    Filme favorito <input type="text" id="in_filme" placeholder="Digite o filme"><br>
+    Quantas vezes assistiu <input type="text" id="in_qtd" placeholder="Digite a quantidade"><br>
+    Última vez que assistiu <input type="text" id="in_ultima"> <br><br>
+
+    <button onclick="analisar()">Analisar Filme</button>
+
+</body>
+</html>
+
+<script>
+    function analisar(){
+        alert(`Você já assistiu o filme ${in_filme.value} pela última vez em ${in_ultima.value}, e já o assitiu ${Number(in_qtd.value)} vezes`)
+    }
+</script>

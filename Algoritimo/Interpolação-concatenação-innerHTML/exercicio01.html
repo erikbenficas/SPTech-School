@@ -1,0 +1,36 @@
+<!-- 1. Crie um programa em HTML/JS que:
+a) Solicite o nome da linha de ônibus que o usuário pega
+b) Solicte o tempo de viagem até o trabalho
+c) Ao clicar num botão "Registar viagem", o programa exibe 4 alertas:
+ 1o - "Registrando sua linha de ônibus"
+ 2o - o nome da linha digitada no programa
+ 3o - "Registrando o tempo da viagem"
+ 4o - o tempo de viagem digitado no programa -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linha de ônibus</title>
+</head>
+<body>
+    <h2>Linha de ônibus</h2>
+
+    Nome da linha de ônibus <input type="text" id="in_nome"><br>
+    Tempo de viagem <input type="text" id="in_tempo"><br><br>
+
+    <button onclick="registrar()">Registrar viagem</button>
+
+</body>
+</html>
+
+<script>
+    function registrar() {
+        alert('Registrando sua linha de ônibus')
+        alert(`${in_nome.value}`)
+        alert('Registrando o tempo da viagem')
+        alert(`${in_tempo.value}`)
+    }
+</script>
