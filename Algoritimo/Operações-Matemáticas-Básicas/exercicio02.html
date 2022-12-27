@@ -1,0 +1,32 @@
+<!-- 2. Crie um programa em HTML/JS que:
+a) Solicite o sabor de uma pizza
+b) Solicite o preço da pizza
+c) Solicite a quantidade de amigos que vai rachar a conta
+d) Ao clicar em "Pedir Pizza", exiba abaixo do botão um texto como este: "A pizza de X custa R$Y e cada amigo vai pagar R$Z" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria</title>
+</head>
+<body>
+    <h2>Pizzaria Aragão</h2>
+
+    Sabor da pizza <input type="text" id="in_sabor"> <br>
+    Preço da pizza <input type="" id="in_preco"> <br>
+    Numero de pessoas para rachar <input type="text" id="in_rachar"> <br><br>
+
+    <button onclick="pedir()">Pedir pizza</button>
+
+    <div id="div_texto"></div>
+</body>
+</html>
+
+<script>
+    function pedir() {
+        div_texto.innerHTML = `A pizza de ${in_sabor.value} custa R$${Number(in_preco.value)} e cada amigo vai pagar R$${in_preco.value / in_rachar.value}`
+    }
+</script>

@@ -1,0 +1,32 @@
+<!-- 10 (Desafio). Túlio Milde é muito preocupado com o meio ambiente. E, ao invés de ficar postando memes e textões contra o governo por conta de desmatamentos e queimadas, resolveu fazer ações concretas em sua vida. A primeira foi economizar água da torneira, evitando desperdício. Túlio descobriu que uma torneira pingando desperdiça de em média 15 litros de água por minuto. Ele tem 3 torneiras em casa.
+
+Assim, crie um programa que:
+a) Pergunte quantos minutos cada torneira ficou pingando (são 3 campos de entrada, um para cada torneira)
+b) Calcule o desperdício total conforme os valores informados em a)
+c) Exiba um alerta com uma frase como esta: "Suas 3 torneiras, juntas, desperdiçaram X litros de água" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meio Ambiente</title>
+</head>
+<body>
+    <h2>Economia de água</h2>
+
+    Torneira 1 <input type="text" id="in_torneira1" placeholder="Tempo de desperdício"> <br>
+    Torneira 2 <input type="text" id="in_torneira2" placeholder="Tempo de desperdício"> <br>
+    Torneira 3 <input type="text" id="in_torneira3" placeholder="Tempo de desperdício"> <br><br>
+
+    <button onclick="desp()">Desperdício</button>
+
+</body>
+</html>
+
+<script>
+    function desp() {
+        alert(`Suas 3 torneiras, juntas, desperdiçaram ${(Number(in_torneira1.value) + Number(in_torneira2.value) + Number(in_torneira3.value)) * 15} litros de água`)
+    }
+</script>

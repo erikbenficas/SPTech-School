@@ -1,0 +1,29 @@
+<!-- 3. Crie um programa em HTML/JS que:
+a) Solicite 2 notas do aluno
+b) Ao clicar em "Ver média", exiba abaixo dele a frase "Sua média foi de X", onde X é a média aritmética entre as 2 notas -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota do aluno</title>
+ </head>
+ <body>
+    <h2>Escola de tecnologia</h2>
+
+    Nota Algoritmo <input type="text" id="in_algoritmo"> <br>
+    Nota Database <input type="text" id="in_database"> <br><br>
+
+    <button onclick="ver()">Ver média</button>
+
+    <div id="div_frase"></div>
+ </body>
+ </html>
+
+ <script>
+    function ver() {
+        div_frase.innerHTML = `<br> Sua média foi de ${(Number(in_algoritmo.value) + Number(in_database.value)) / 2}`
+    }
+ </script>

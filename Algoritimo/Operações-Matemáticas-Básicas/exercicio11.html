@@ -1,0 +1,33 @@
+<!-- 11. Um clube de futebol precisa de um programa para saber quanto arrecadou por jogo. Assim, crie um programa que:
+a) Pergunte ao usuário a quantidade de ingressos de estudante vendidos
+b) Pergunte ao usuário a quantidade de ingressos comuns vendidos
+c) Pergunte ao usuário o valor do ingresso comum
+d) Calcule a arrecadação, considerando que um ingresso de estudante custa metade do ingresso comum
+e) Exiba um alerta com uma frase assim: "A arrecadação foi de R$X" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de futebol</title>
+</head>
+<body>
+    <h2>Arrecadações por jogos</h2>
+
+    Ingressos de estudante <input type="text" id="in_meia" placeholder="Digite a quantidade"><br>
+    Ingressos comuns <input type="text" id="in_comum" placeholder="Digite a quantidade"><br><br>
+
+    Preço do ingresso meia <input type="text" id="in_meiaPreco"><br>
+    Preço do ingresso comum <input type="text" id="in_comumPreco"><br>
+
+    <button onclick="calcular()">Calcular arrecadação</button>
+</body>
+</html>
+
+<script>
+    function calcular() {
+        alert(`A arrecadação  foi de R$${(Number(in_meia.value) * Number(in_meiaPreco.value)) + (Number(in_comum.value) * Number(in_comumPreco.value))}`)
+    }
+</script>

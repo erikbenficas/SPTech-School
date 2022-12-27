@@ -1,0 +1,36 @@
+<!-- 12. Crie um programa que:
+a) Solicite ao usuário seu peso e altura
+b) Ao clicar no botão "IMC Homem", calcule e exiba seu IMC considerando que é um homem
+c) Ao clicar no botão "IMC Mulher", calcule e exiba seu IMC considerando que é uma mulher
+Use a fórmula de IMC em https://centrodeobesidadeediabetes.org.br/tudo-sobre-obesidade/calculadora-de-imc/. E considere que o IMC da mulher é sempre 10% menor que o do homem. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde</title>
+</head>
+<body>
+    <h2>Calculando o IMC</h2>
+
+    Peso <input type="text" id="in_peso" placeholder="Digite seu peso"><br>
+    Altura <input type="text" id="in_altura" placeholder="Digite sua altura"><br><br>
+
+    <button onclick="homem()">IMC Homem</button>
+    <button onclick="mulher()">IMC Mulher</button>
+
+    <div id="div_calculo"></div>
+</body>
+</html>
+
+<script>
+    function homem () {
+        div_calculo.innerHTML = `${Number(in_peso.value) / (Number(in_altura.value) * Number(in_altura.value))}`
+    }
+
+    function mulher () {
+        div_calculo.innerHTML = `${(Number(in_peso.value) / (Number(in_altura.value) * Number(in_altura.value)) ) * 0.9}`
+    }
+</script>

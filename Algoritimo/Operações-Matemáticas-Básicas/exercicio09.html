@@ -1,0 +1,50 @@
+<!-- 9. Crie um programa que:
+a) Solicite 2 números ao usuário
+b) tenha um botão para cada operação aritmética. Ao clicar em algum deles, exibir ABAIXO do botão UMA dessas frases:
+
+   A soma entre X e Y é Z
+   A diferença entre X e Y é Z
+   O produto entre X e Y é Z
+   A razão entre X e Y é Z   -->
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operações aritméticas</title>
+   </head>
+   <body>
+        <h2>Operações aritméticas</h2>
+
+        Primeiro número <input type="text" id="in_primeiro"> <br>
+        Segundo número <input type="text" id="in_segundo"> <br><br>
+
+        <button onclick="soma()">Soma</button>
+        <button onclick="diferenca()">Diferença</button>
+        <button onclick="produto()">Produto</button>
+        <button onclick="razao()">Razão</button>
+        
+        <div id="div_frase"></div>
+
+   </body>
+   </html>
+
+   <script>
+    function soma () {
+        div_frase.innerHTML = `A soma entre ${Number(in_primeiro.value)} e ${Number(in_segundo.value)} é ${Number(in_primeiro.value) + Number(in_segundo.value)}`
+    }
+
+    function diferenca () {
+        div_frase.innerHTML = `A diferença entre ${Number(in_primeiro.value)} e ${Number(in_segundo.value)} é ${Number(in_primeiro.value) - Number(in_segundo.value)}`
+    }
+
+    function produto () {
+        div_frase.innerHTML = `O produto entre ${Number(in_primeiro.value)} e ${Number(in_segundo.value)} é ${Number(in_primeiro.value) * Number(in_segundo.value)}`
+    }
+
+    function razao () {
+        div_frase.innerHTML = `A razão entre ${Number(in_primeiro.value)} e ${Number(in_segundo.value)} é ${Number(in_primeiro.value) / Number(in_segundo.value)}`
+    }
+   </script>

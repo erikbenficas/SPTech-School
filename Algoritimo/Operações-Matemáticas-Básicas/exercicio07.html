@@ -1,0 +1,30 @@
+<!-- 7. No desenho animado Dragon Ball, existem personagens de uma raça chamada Sayajins. Eles possuem a seguinte característica: Quando estão em sua "forma normal", sua força (ou "ki") é normal. Quando estão na forma Super Sayajin, sua força (ou "ki") aumenta em 50x. Quando estão na forma Super Sayajin 2, sua força (ou "ki") aumenta em 100x. Crie um programa que ajude a calcular o "ki" de um guerreiro Sayajin.
+a) Solicite o nome do guerreiro
+b) Solicite o ki normal do guerreiro
+c) Ao clicar num botão "Ver ki em cada forma", exiba um alerta para a forma Super Sayajin e outro para Super Sayajin 2, exibindo seus respectivos "ki". Em ambas exiba o nome do guerreiro também -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon ball</title>
+</head>
+<body>
+    <h2>Força dos guerreiros (KI)</h2>
+
+    Nome do guerreiro <input type="text" id="in_nome"><br>
+    Força (KI) normal <input type="text" id="in_ki"> <br><br>
+
+    <button onclick="ver()">Ver KI em cada forma</button>
+
+</body>
+</html>
+
+<script>
+    function ver() {
+        alert (`O ki do Guerreiro ${in_nome.value} na forma Super Sayajin é de ${Number(in_ki.value) * 50}`)
+        alert (`O ki do Guerreiro ${in_nome.value} na forma Super Sayajin 2 é de ${Number(in_ki.value) * 100}`)
+    }
+</script>

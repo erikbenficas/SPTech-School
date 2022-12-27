@@ -1,0 +1,29 @@
+<!-- 1. Crie um programa em HTML/JS que:
+a) Tenha uma caixinha de entrada de dados (tag input) com o texto indicativo "Digite uma memória pro seu diário" antes dela
+
+b) Ao clicar no botão "Registrar Memória", o que está digitado na caixinha deve ir para baixo do botão. A cada vez que se clicar o novo registro vai para baixo do anterior, mantendo-se todos -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário</title>
+</head>
+<body>
+    <h2>Querido diário</h2>
+
+    Digite uma mermória para o seu diário <input type="text" id="in_memoria"> <br><br>
+
+    <button onclick="registrar()">Registrar memória</button>
+
+    <div id="div_texto"></div>
+</body>
+</html>
+
+<script>
+    function registrar() {
+        div_texto.innerHTML += `<br> ${in_memoria.value} <br>`
+    }
+</script>
