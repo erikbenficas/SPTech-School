@@ -1,0 +1,45 @@
+<!-- 3. Norma Ligna é muito estudiosa e sua meta é sempre ser uma aluna fora de série. Na faculdade onde estuda os "fora de série" são os alunos com média acima de 9,4. Portanto, para ajudá-la, crie um programa o qual:
+
+a) Pergunte o valor de 3 notas
+
+b) Ao clicar num botão "Analisar desempenho", calcule a média entre as notas e exiba na tela a frase "Sua média foi de X", onde X é a média calculada
+
+c) Somente caso a média for acima de 9,4 exibir também a frase "Parabéns, você é fora de série!" -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota da faculdade</title>
+</head>
+<body>
+
+    Nota 1 <input type="text" id="in_n1"><br>
+    Nota 2 <input type="text" id="in_n2"><br>
+    Nota 3 <input type="text" id="in_n3"><br><br>
+
+    <button onclick="analisar()">Analisar desempenho</button>
+
+    <div id="div_resposta"></div>
+    
+</body>
+</html>
+
+<script>
+    function analisar() {
+        var nota1 = Number(in_n1.value);
+        var nota2 = Number(in_n2.value);
+        var nota3 = Number(in_n3.value);
+
+        var media = (nota1 + nota2 + nota3) / 3
+
+        div_resposta.innerHTML = `Sua média foi de ${media}`
+
+        if(media > 9.4) {
+            div_resposta.innerHTML += `<br><br> Parabéns, você é fora de série`
+        }
+    }
+</script> 
+
